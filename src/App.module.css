@@ -1,0 +1,50 @@
+body {
+  font-size: 18pt;
+  color: #fff;
+  background: #99bfd6;
+}
+
+.wrapper {
+  margin: 10% auto;
+  width: 50%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+  cursor: pointer;
+  padding: 20px 30px;
+  background-color: rgb(224, 98, 98);
+  border-radius: 10px;
+}
+
+label:hover {
+  background: #229e9e;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"] ~ ul {
+  height: 0;
+  transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked ~ ul {
+  height: 100%;
+  transform-origin: top;
+  transition: transform 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+input[type="checkbox"]:checked + label {
+  background: #26c281;
+  border-bottom: 1px solid #fff;
+}
